@@ -1,0 +1,15 @@
+@import "../../../styles/colorsAndFonts.scss";
+
+.navBrand {
+  text-transform: uppercase;
+  // background-color: $navBarBG;
+  padding: 10px;
+  font-family: $font3;
+  font-size: 2em;
+}
+
+#navBarNav {
+  background-color: $navBarBG!important;
+  position: sticky;
+  height: 80px;
+}
