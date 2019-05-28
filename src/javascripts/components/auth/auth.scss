@@ -1,0 +1,20 @@
+#google-auth {
+  border-radius: 10px;
+  border: none!important;
+  // outline: none!important;
+  // box-shadow: 1px 1px 1px white;
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  left: 70%;
+}
+
+#google-auth:focus {
+  outline: white!important;
+  border: none;
+}
+
+#google-auth:hover {
+  transform: scale(1.1);
+  transition: .5s;
+}
