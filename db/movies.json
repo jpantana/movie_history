@@ -1,0 +1,28 @@
+{
+  "movie1": {
+    "title": "The Lord Of The Rings",
+    "movieRating": "PG-13",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SY999_CR0,0,673,999_AL_.jpg"
+  },
+  "movie2": {
+    "title": "Air Force One",
+    "movieRating": "PG-13",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/2a/Air_Force_One_%28movie_poster%29.jpg"
+  },
+  "movie3": {
+    "title": "Conair",
+    "movieRating": "PG-13",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/1d/Conairinternational.jpg"
+  },
+  "movie4": {
+    "title": "The Dark Knight",
+    "movieRating": "PG-13",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg"
+  },
+  "movie5": {
+    "title": "That Thing You Do",
+    "movieRating": "PG",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BOWVmN2ZhZjgtZGEzMy00NDkxLWI5YWQtYTE2ZTk0YzIyMzc0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"
+  }
+}
+
