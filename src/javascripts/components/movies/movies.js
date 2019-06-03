@@ -1,6 +1,7 @@
 import util from '../../helpers/util';
 import addMovie from '../../helpers/data/moviesData';
 import watchList from '../watchList/watchList';
+import stars from '../stars/stars';
 import './movies.scss';
 
 const movieCardBuilder = () => {
@@ -27,7 +28,7 @@ const movieCardBuilder = () => {
     domString += '</div>';
     util.printToDom('event', domString);
     watchList.addToWatchList(movies);
-    // stars.starsToBeChecked(movies); // calling this in watchList now
+    stars.starsToBeChecked(movies);
   }).catch(err => console.error('could not get movie', err));
 };
 
