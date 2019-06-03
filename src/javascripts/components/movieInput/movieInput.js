@@ -7,21 +7,21 @@ const newMovie = (e) => {
   const newMovieTitle = document.getElementById('movieTitleInput').value;
   const newMovieImg = document.getElementById('imageUrlInput').value;
   const newMovieRating = document.getElementsByClassName('movieRatingCheckBox').checked;
-  const newMovieItem = {
+  const replaceMovieObj = {
     title: newMovieTitle,
     imageUrl: newMovieImg,
     movieRating: newMovieRating,
+    stars: 0,
   };
   const radioBtns = document.getElementsByName('rating');
   radioBtns.forEach((radio) => {
     if (radio.checked) {
-      newMovieItem.movieRating = radio.value;
+      replaceMovieObj.movieRating = radio.value;
     }
   });
-  moviesData.makeNewMovie(newMovieItem)
-    .then((resp) => {
+  moviesData.makeNewMovie(replaceMovieObj)
+    .then(() => {
       movies.movieCardBuilder();
-      console.error(resp);
     }).catch(err => console.error(err));
 };
 
@@ -51,8 +51,8 @@ const movieFormBuilder = () => {
   document.getElementById('movieSubmit').addEventListener('click', newMovie);
 };
 
-const getMovieInput = () => {
-  document.getElementById('movieTitleInput').value();
-};
+// const getMovieInput = () => {
+//   document.getElementById('movieTitleInput').value();
+// };
 
-export default { movieFormBuilder, getMovieInput };
+export default { movieFormBuilder };

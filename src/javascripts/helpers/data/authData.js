@@ -16,7 +16,6 @@ const movieCards = document.getElementById('event');
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
-    // console.error(user, 'this is user', user.uid);
     if (user) {
       authDiv.classList.add('hide');
       moviesNavbar.classList.remove('hide');
@@ -25,8 +24,8 @@ const checkLoginStatus = () => {
       navbarBrand.classList.remove('hide');
       movieForm.classList.remove('hide');
       movieCards.classList.remove('hide');
-      movies.movieCardBuilder(user.uid);
       movieInput.movieFormBuilder();
+      movies.movieCardBuilder(user.uid);
     } else {
       authDiv.classList.remove('hide');
       moviesNavbar.classList.add('hide');
