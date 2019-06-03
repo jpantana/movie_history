@@ -1,36 +1,47 @@
-// import util from '../../helpers/util';
-import $ from '../../../../node_modules/jquery';
-import stars from '../stars/stars';
 import userData from '../../helpers/data/userData';
+import util from '../../helpers/util';
 
-// import from axios call movies in moviesData
-const addToWatchList = (movies) => {
-  stars.starsToBeChecked(movies); // calling stars here to avoid d cycle
-  const watchListArray = document.getElementsByName('watchList');
-  watchListArray.forEach((cardBtn) => {
-    // console.error(cardBtn);
-    // const whatever = cardBtn.closest('div div');
-    // console.error('something here', whatever);
-    cardBtn.addEventListener('click', () => {
-      // e.preventDefault();
-      // console.error(e.target);
-      movies.forEach((movie) => {
-        // console.error(movie);
-        // console.error(cardBtn.closest('h3'));
-        // if (e.target.closest('<h3>').value === movie.title) {
-        //   Push to new object and pass that object in a call to kovieData axios
-        //   }
-        // console.error(cardBtn, 'hi');
-        if ($(this).data('clicked', true)) {
-        // console.error('this is movie', movie);
-          userData.watchListMovies(movie.title); // this actually seemed to work
-        //   // this adds every movie to this data set
-        }
-      });
-    });
-  });
-  userData.watchListsOnWatchList();
+// this builds the objects to send to firebase of user_movie
+// its based on the movie that is clicked when add movie button appears and stars = 0 on STARS
+const addMovieDataToUserMovie = (movie) => {
+  const movieTtl = movie.title;
+  const movieId2 = movie.id;
+  const movRating = movie.movieRating;
+  const moviesOnWatchList = {
+    movieId: '',
+    movieTitle: '',
+    rating: '',
+  };
+  moviesOnWatchList.movieTitle = movieTtl;
+  moviesOnWatchList.movieId = movieId2;
+  moviesOnWatchList.rating = movRating;
+  // console.error('this movie to be added', movie.title);
+  userData.watchListMovies(moviesOnWatchList)
+    .then(() => {})
+    .catch(err => console.error('no new moive added to watch list', err));
 };
 
+// import from axios call movies in moviesData
+// the stars printing depends on it
+// in theory this should print the user_movie data beneath the movie cards i think
+const addToWatchList = (moviesToWatch) => {
+  let domString = '';
+  userData.watchListsOnWatchList(moviesToWatch)
+    .then((results) => {
+      const userMovieResults = results;
+      domString += '<h1>Movies I Want To Watch</h1>';
+      userMovieResults.forEach((userMovie) => {
+        domString += `
+      <div class="col-3 mb-5 justify-content-center">
+        <div id="" class="card">
+          <h3>${userMovie.movieTitle}</h3>
+          <h5>${userMovie.rating}</h5>
+        </div>
+      </div>`;
+      });
+      util.printToDom('watchListDiv', domString);
+    })
+    .catch(err => console.error('no movies to watch', err));
+};
 
-export default { addToWatchList };
+export default { addToWatchList, addMovieDataToUserMovie };
