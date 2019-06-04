@@ -43,14 +43,14 @@ const movieFormBuilder = () => {
       <label for="movieImageUrl">Image Link</label>
       <input id="imageUrlInput" type="text" class="form-control" id="" placeholder="Image URL">
     </div>
-    <div class="text-left">THIS MOVIE IS RATED...</div>
+    <div class="text-left movieRatingBanner">MOVIE RATING</div>
     <div class="row justify-content-around holds-radios" id="movieRatingCheckBox">
-      <input class="form-radio" type="radio" name="rating" id="radioRating0" value="R"><label class="m-1" for="radioRating0">G</label>
-      <input class="form-radio" type="radio" name="rating" id="radioRating1" value="R"><label class="m-1" for="radioRating1">PG</label>
-      <input class="form-radio" type="radio" name="rating" id="radioRating2" value="PG-13"><label class="m-1" for="radioRating2">PG-13</label>
-      <input class="form-radio" type="radio" name="rating" id="radioRating3" value="PG"><label class="m-1" for="radioRating3">R</label>
+      <input class="form-radio" type="radio" name="rating" id="radioRating0" value="G"><label class="labelFormRating m-1" for="radioRating0">G</label>
+      <input class="form-radio" type="radio" name="rating" id="radioRating1" value="PG"><label class="labelFormRating m-1" for="radioRating1">PG</label>
+      <input class="form-radio" type="radio" name="rating" id="radioRating2" value="PG-13"><label class="labelFormRating m-1" for="radioRating2">PG-13</label>
+      <input class="form-radio" type="radio" name="rating" id="radioRating3" value="R"><label class="labelFormRating m-1" for="radioRating3">R</label>
     </div>
-    <button id="movieSubmit" type="submit" class="btn btn-primary m-2 w-100">Submit Movie</button>
+    <button id="movieSubmit" type="submit" class="btn btn-primary m-2 w-100 submitBtn">Submit Movie</button>
   </div>
 </form>`;
   util.printToDom('movieForm', domString);
@@ -58,7 +58,7 @@ const movieFormBuilder = () => {
 };
 
 const btnToAddNewMovie = () => {
-  const domString = '<button id="addNewMovieBtn" class="btn btn-success">Add New Movie</button>';
+  const domString = '<button id="addNewMovieBtn" class="btn btn-success addNewMovie">Add New Movie</button>';
   util.printToDom('movieForm', domString);
   document.getElementById('addNewMovieBtn').addEventListener('click', movieFormBuilder);
 };

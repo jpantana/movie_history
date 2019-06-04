@@ -1,9 +1,5 @@
 @import '../../../styles/colorsAndFonts.scss';
 
-// .hide {
-//   display: none;
-// }
-
 #movieRow {
   display: flex;
   flex-flow: row wrap;
@@ -13,6 +9,7 @@
 
 .movieCards {
   border: 1px solid $navBarBG!important;
+  margin-top: 15px;
 }
 
 .hideStar {
@@ -24,86 +21,86 @@
   color: $navBarC;
   font-family: $font3;
   text-transform: uppercase;
+  max-height: 60px;
 }
 
 .movieRating {
   position: relative;
+  top: -10px;
+  font-family: $font1;
+  font-size: 24px;
 }
 
 .addMovieBtn {
   position: relative;
   left: -100px;
   top: -20px;
+  box-shadow: 2px 2px 2px white!important;
 }
 
 .starsPosClass {
   position: relative;
   top: -20px;
-  left: 320px;
+  left: 190px;
+  opacity: 0;
+}
+.starsPosClass:hover {
+  color: gold;
 }
 
 .starsPosClass2 {
   position: relative;
-  top: -30px;
-  left: 100px;
+  top: -15px;
+  left: 210px;
 }
 
-.form-radio
-{
-     -webkit-appearance: none;
-     -moz-appearance: none;
-     appearance: none;
-     display: inline-block;
-     position: relative;
-     background-color: #f1f1f1;
-     color: #666;
-     top: 10px;
-     height: 30px;
-     width: 30px;
-     border: 0;
-     border-radius: 50px;
-     cursor: pointer;     
-     margin-right: 7px;
-     margin-bottom: 15px;
-     outline: none;
+.colorInheritDiv {
+  // color: gold;
+  // opacity: 0;
 }
-.form-radio:checked::before
-{
-     position: absolute;
-     font: 13px/1 'Open Sans', sans-serif;
-     left: 11px;
-     top: 7px;
-     content: '\02143';
-     transform: rotate(40deg);
-}
-.form-radio:hover
-{
-     background-color: #f7f7f7;
-}
-.form-radio:checked
-{
-     background-color: #f1f1f1;
-}
-label
-{
-     font: 15px/1.7 'Open Sans', sans-serif;
-     color: #333;
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
-     cursor: pointer;
-} 
 
-.dltBtn {
-  font-size: 25px!important;
-  color: white;
+.stars {
+  color: $navBarBG;
+}
+
+.stars:hover {
+  color: gold;
 }
 
 .saysWatchList {
   font-size: 10px;
   font-family: $font4;
-  display: block;
+  margin-right: 8px;
 }
 
 .onWatchListFa {
   display: block;
+  color: rgb(82, 233, 69);
+}
+.notOnWatchListFa {
+  display: block;
+  // color: red;
+}
+
+.posters {
+  width: 85%!important;
+  margin: auto!important;
+  margin-top: 15px!important;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+
+.watchListDiv {
+  position: relative;
+  top: -45px;
+}
+
+.addToWatchListBtn {
+  position: relative;
+  top: -36px;
+  font-size: 10px!important;
+  font-family: $font4;
+}
+
+.fas, .far {
+  font-size: 24px;
 }

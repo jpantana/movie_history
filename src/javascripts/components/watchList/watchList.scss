@@ -1,0 +1,38 @@
+@import '../../../styles/colorsAndFonts.scss';
+
+.posters2 {
+  width: 85%!important;
+  margin: auto!important;
+}
+
+.watchListHeader {
+  font-family: $font3;
+  border-radius: 5px;
+  border-bottom: 20px solid $darkFont;
+  color: white;
+  background-color: $navBarBG;
+  margin: auto;
+  width: 35%;
+}
+
+.dltBtn {
+  font-size: 25px!important;
+  color: white;
+  position: relative;
+  top: -40px;
+  left: -10px;
+  cursor: pointer;
+}
+
+.dltBtn:hover {
+  color: #eee;
+  transform: scale(1.1);
+  transition: .4s;
+}
+.dltBtn:active {
+  color: white;
+}
+
+.secondDiv {
+  // background-color: lightseagreen;
+}
