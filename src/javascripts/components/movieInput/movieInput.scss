@@ -1,51 +1,13 @@
 @import '../../../styles/colorsAndFonts.scss';
 
-// .hide {
-//   display: none;
-// }
+.wholeForm {
+  border-radius: 10px;
+  border: 1px solid $navBarBG;
+  background-color: $navBarC;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
-#movieRow {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-content: stretch;
-}
-
-.movieCards {
-  border: 1px solid $navBarBG!important;
-}
-
-.hideStar {
-  display: none!important;
-}
-
-.cardHeader {
-  background-color: $navBarBG!important;
-  color: $navBarC;
-  font-family: $font3;
-  text-transform: uppercase;
-}
-
-.movieRating {
-  position: relative;
-}
-
-.addMovieBtn {
-  position: relative;
-  left: -100px;
-  top: -20px;
-}
-
-.starsPosClass {
-  position: relative;
-  top: -20px;
-  left: 320px;
-}
-
-.starsPosClass2 {
-  position: relative;
-  top: -30px;
-  left: 100px;
 }
 
 .form-radio
@@ -93,17 +55,14 @@ label
      cursor: pointer;
 } 
 
-.dltBtn {
-  font-size: 25px!important;
-  color: white;
+.holds-radios {
+  background-color: lightblue;
 }
 
-.saysWatchList {
-  font-size: 10px;
-  font-family: $font4;
-  display: block;
-}
-
-.onWatchListFa {
-  display: block;
+.movieTitle {
+  font-family: $font1;
+  font-size: 32px!important;
+  margin: auto!important;
+  justify-content: center!important;
+  text-align: center!important;
 }
