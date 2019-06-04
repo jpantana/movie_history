@@ -1,0 +1,101 @@
+@import '../../../styles/colorsAndFonts.scss';
+
+.wholeForm {
+  border-radius: 10px;
+  border: 3px solid $navBarBG;
+  box-shadow: 2px 2px 2px lightgrey;
+  background-color: $navBarC;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-radio {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #f1f1f1;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     margin-bottom: 15px;
+     outline: none;
+}
+
+.form-radio:checked::before {
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+} 
+
+.form-radio:hover {
+     background-color: #f7f7f7;
+}
+
+.form-radio:checked {
+     background-color: #f1f1f1;
+}
+
+label {
+     font: 15px/1.7 'Open Sans', sans-serif;
+     color: #333;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     cursor: pointer;
+} 
+
+.holds-radios {
+  background-color: lightblue;
+}
+
+.submitBtn {
+     font-family: $font2;
+     position: relative;
+     left: -9px;
+     text-transform: uppercase;
+     background-color: $darkFont!important;
+     border: none!important;
+}
+
+.movieTitle {
+  font-family: $font1;
+  font-size: 32px!important;
+  margin: auto!important;
+  justify-content: center!important;
+  text-align: center!important;
+}
+
+.labelFormRating {
+     font-family: $font1;
+     position: relative;
+     top: 5px;
+     left: -20px;
+}
+
+.movieRatingBanner {
+     position: relative;
+     right: -130px;
+     margin-bottom: 10px;
+     text-align: center!important;
+     margin: auto!important;
+}
+
+.addNewMovie {
+     position: absolute;
+     top: 20px;
+     right: 45%;
+     background-color: $darkFont!important;
+     border: 1px solid $darkFont!important;
+     font-family: $font2;
+     text-transform: uppercase;
+}

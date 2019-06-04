@@ -1,3 +1,5 @@
+@import '../../../styles/colorsAndFonts.scss';
+
 #movieRow {
   display: flex;
   flex-flow: row wrap;
@@ -5,6 +7,100 @@
   align-content: stretch;
 }
 
+.movieCards {
+  border: 1px solid $navBarBG!important;
+  margin-top: 15px;
+}
+
 .hideStar {
   display: none!important;
+}
+
+.cardHeader {
+  background-color: $navBarBG!important;
+  color: $navBarC;
+  font-family: $font3;
+  text-transform: uppercase;
+  max-height: 60px;
+}
+
+.movieRating {
+  position: relative;
+  top: -10px;
+  font-family: $font1;
+  font-size: 24px;
+}
+
+.addMovieBtn {
+  position: relative;
+  left: -100px;
+  top: -20px;
+  box-shadow: 2px 2px 2px white!important;
+}
+
+.starsPosClass {
+  position: relative;
+  top: -20px;
+  left: 190px;
+  opacity: 0;
+}
+.starsPosClass:hover {
+  color: gold;
+}
+
+.starsPosClass2 {
+  position: relative;
+  top: -15px;
+  left: 210px;
+}
+
+.colorInheritDiv {
+  // color: gold;
+  // opacity: 0;
+}
+
+.stars {
+  color: $navBarBG;
+}
+
+.stars:hover {
+  color: gold;
+}
+
+.saysWatchList {
+  font-size: 10px;
+  font-family: $font4;
+  margin-right: 8px;
+}
+
+.onWatchListFa {
+  display: block;
+  color: rgb(82, 233, 69);
+}
+.notOnWatchListFa {
+  display: block;
+  // color: red;
+}
+
+.posters {
+  width: 85%!important;
+  margin: auto!important;
+  margin-top: 15px!important;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+
+.watchListDiv {
+  position: relative;
+  top: -45px;
+}
+
+.addToWatchListBtn {
+  position: relative;
+  top: -36px;
+  font-size: 10px!important;
+  font-family: $font4;
+}
+
+.fas, .far {
+  font-size: 24px;
 }

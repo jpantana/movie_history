@@ -5,7 +5,6 @@ import movies from '../../components/movies/movies';
 import auth from '../../components/auth/auth';
 import movieInput from '../../components/movieInput/movieInput';
 
-
 const authDiv = document.getElementById('auth');
 const moviesNavbar = document.getElementById('navbar-button-movies');
 const authNavbar = document.getElementById('navbar-button-auth');
@@ -24,7 +23,7 @@ const checkLoginStatus = () => {
       navbarBrand.classList.remove('hide');
       movieForm.classList.remove('hide');
       movieCards.classList.remove('hide');
-      movieInput.movieFormBuilder();
+      movieInput.btnToAddNewMovie();
       movies.movieCardBuilder(user.uid);
     } else {
       authDiv.classList.remove('hide');
