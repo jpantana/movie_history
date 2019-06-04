@@ -3,6 +3,7 @@ import apiKeys from '../apiKeys.json';
 
 const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // pulls down database user_movie info and resolves with id
 const watchListsOnWatchList = () => new Promise((resolve, reject) => {
   axios.get(`${firebaseUrl}/user_movie.json`)
@@ -19,9 +20,11 @@ const watchListsOnWatchList = () => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // use below to add movie to movies you want to watch.
 const watchListMovies = watchMovieObject => axios.post(`${firebaseUrl}/user_movie.json`, watchMovieObject);
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // pushes data to server for you to add 'stars' to new movies
 const updateStars = (movieUpdate, movieId) => axios.put(`${firebaseUrl}/movies/${movieId}/stars.json`, movieUpdate);
 

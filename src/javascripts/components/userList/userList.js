@@ -1,5 +1,6 @@
 import userData from '../../helpers/data/userData';
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // this builds the objects to send to firebase of user_movie
 // its based on the movie that is clicked when add movie button appears and stars = 0 on STARS
 const addMovieDataToUserMovie = (movie) => {

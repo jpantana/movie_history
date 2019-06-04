@@ -2,11 +2,10 @@ import util from '../../helpers/util';
 import moviesData from '../../helpers/data/moviesData';
 import watchList from '../watchList/watchList';
 import userData from '../../helpers/data/userData';
-// used to be watchList... below
 import userList from '../userList/userList';
 import './movies.scss';
 
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // adds stars to new movies and must be on To Watch list first
 const addNewStarReview = (e, movieId) => {
   const starsNumUpdate = {
@@ -21,7 +20,7 @@ const addNewStarReview = (e, movieId) => {
   }
 };
 
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // changes minus icon to check symbol in movie card header if added to user_movie
 const changeCardWatchListStatus = (movie) => {
   userData.watchListsOnWatchList()
@@ -38,7 +37,7 @@ const changeCardWatchListStatus = (movie) => {
     .catch(err => console.error('watchlist is empty', err));
 };
 
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // add events based on stars. called by starsToBeChecked
 const addEvents = (movie, j) => {
   const newStarRankingEvent = document.getElementsByClassName('starsPosClass');
@@ -64,6 +63,7 @@ const addEvents = (movie, j) => {
   }
 };
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // stars functionality - reads the key/value of stars in movies.json
 const starsToBeChecked = (movies) => {
   movies.forEach((movie, i) => {
@@ -80,7 +80,7 @@ const starsToBeChecked = (movies) => {
   });
 };
 
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // builds movie cards from movies data
 const movieCardBuilder = () => {
   let domString = '<div class="container">';

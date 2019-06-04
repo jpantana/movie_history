@@ -3,11 +3,10 @@ import util from '../../helpers/util';
 import deleteCards from '../deleteCards/deleteCards';
 import './watchList.scss';
 
-// command Z a bunch
-
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // import from axios call movies in moviesData
 // the stars printing depends on it
-// in theory this should print the user_movie data beneath the movie cards i think
+// this will print the user_movie data beneath the movie cards
 const addToWatchList = () => {
   let domString = '';
   userData.watchListsOnWatchList()
