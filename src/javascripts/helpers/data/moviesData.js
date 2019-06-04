@@ -5,6 +5,7 @@ const firebaseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const makeNewMovie = movieObject => axios.post(`${firebaseUrl}/movies.json`, movieObject);
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const getMovieByUid = () => new Promise((resolve, reject) => {
   axios.get(`${firebaseUrl}/movies.json`)
     .then((results) => {
@@ -19,6 +20,7 @@ const getMovieByUid = () => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // deletes user cards
 const deleteMovie = movieId => axios.delete(`${firebaseUrl}/user_movie/${movieId}.json`);
 

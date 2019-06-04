@@ -5,6 +5,7 @@ import movies from '../../components/movies/movies';
 import auth from '../../components/auth/auth';
 import movieInput from '../../components/movieInput/movieInput';
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const authDiv = document.getElementById('auth');
 const moviesNavbar = document.getElementById('navbar-button-movies');
 const authNavbar = document.getElementById('navbar-button-auth');
@@ -13,6 +14,7 @@ const navbarBrand = document.getElementById('navBarBrand');
 const movieForm = document.getElementById('movieForm');
 const movieCards = document.getElementById('event');
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {

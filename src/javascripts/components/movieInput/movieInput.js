@@ -3,6 +3,8 @@ import moviesData from '../../helpers/data/moviesData';
 import movies from '../movies/movies';
 import './movieInput.scss';
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// takes in new object data to add movie posters
 const newMovie = (e) => {
   e.preventDefault();
   const newMovieTitle = document.getElementById('movieTitleInput').value;
@@ -28,6 +30,8 @@ const newMovie = (e) => {
     }).catch(err => console.error(err));
 };
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// main poster builder for movie cards
 const movieFormBuilder = () => {
   let domString = '';
   domString += `
@@ -57,6 +61,8 @@ const movieFormBuilder = () => {
   document.getElementById('movieSubmit').addEventListener('click', newMovie);
 };
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// button that calls form to add new movie
 const btnToAddNewMovie = () => {
   const domString = '<button id="addNewMovieBtn" class="btn btn-success addNewMovie">Add New Movie</button>';
   util.printToDom('movieForm', domString);
