@@ -14,7 +14,6 @@ const watchListsOnWatchList = () => new Promise((resolve, reject) => {
         watchListResults[watchListId].id = watchListId;
         watchLists.push(watchListResults[watchListId]);
       });
-      // resolves correctly, but needs to print. watchLists resolves to
       resolve(watchLists);
     })
     .catch(err => reject(err));

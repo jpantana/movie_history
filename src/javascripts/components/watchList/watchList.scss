@@ -36,3 +36,115 @@
 .secondDiv {
   // background-color: lightseagreen;
 }
+
+
+
+
+
+#movieRow {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: stretch;
+}
+
+.movieCards {
+  border: 1px solid $navBarBG!important;
+  margin-top: 15px;
+}
+
+.hideStar {
+  display: none!important;
+}
+
+.cardHeader {
+  background-color: $navBarBG!important;
+  color: $navBarC;
+  font-family: $font3;
+  text-transform: uppercase;
+  max-height: 60px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.movieRatingWatchList {
+  font-family: $font1;
+  // margin: 0 0 7px 10px;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.addMovieBtn {
+
+  box-shadow: 2px 2px 2px white!important;
+}
+
+// STARS
+.starsContainer {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.starsPosClass {
+  position: relative;
+  top: -4px;
+  left: -17px;
+  opacity: 0;
+  height: 10px;
+  &:hover > .starsPosClass2 {
+    color: gold;
+  }
+}
+
+.starsPosClass2 {
+  top: -15px;
+  left: 210px;
+}
+
+.stars {
+  color: $navBarBG;
+  font-size: 18px!important;
+}
+
+.stars:hover {
+  color: gold;
+}
+
+.saysWatchList {
+  font-size: 10px;
+  font-family: $font4;
+  margin-right: 8px;
+}
+
+.onWatchListFa {
+  display: block;
+  color: rgb(82, 233, 69);
+}
+.notOnWatchListFa {
+  display: block;
+}
+
+.posters {
+  width: 85%!important;
+  margin: auto!important;
+  margin-top: 15px!important;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+
+.watchListDiv {
+  position: relative;
+  top: -45px;
+}
+
+.addToWatchListBtn {
+  top: -36px;
+  font-size: 10px!important;
+  font-family: $font4;
+}
+
+.fas, .far {
+  font-size: 24px;
+}

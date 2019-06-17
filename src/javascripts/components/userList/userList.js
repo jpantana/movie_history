@@ -18,7 +18,6 @@ const addMovieDataToUserMovie = (movie) => {
   moviesOnWatchList.movieId = movieId2;
   moviesOnWatchList.rating = movRating;
   moviesOnWatchList.imageUrl = movImg;
-  // console.error('this movie to be added', movie.title);
   userData.watchListMovies(moviesOnWatchList)
     .then(() => {})
     .catch(err => console.error('no new moive added to watch list', err));

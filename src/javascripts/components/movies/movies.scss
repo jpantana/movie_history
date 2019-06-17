@@ -24,43 +24,47 @@
   max-height: 60px;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: row;
+}
+
 .movieRating {
-  position: relative;
-  top: -10px;
   font-family: $font1;
-  font-size: 24px;
+  margin: 0 0 7px 10px;
+  font-size: 20px;
 }
 
 .addMovieBtn {
-  position: relative;
-  left: -100px;
-  top: -20px;
+
   box-shadow: 2px 2px 2px white!important;
+}
+
+// STARS
+.starsContainer {
+  align-self: flex-end;
+  margin-left: auto;
 }
 
 .starsPosClass {
   position: relative;
-  top: -20px;
-  left: 190px;
+  top: -4px;
+  left: -17px;
   opacity: 0;
-}
-.starsPosClass:hover {
-  color: gold;
+  height: 10px;
+  &:hover > .starsPosClass2 {
+    color: gold;
+  }
 }
 
 .starsPosClass2 {
-  position: relative;
   top: -15px;
   left: 210px;
 }
 
-.colorInheritDiv {
-  // color: gold;
-  // opacity: 0;
-}
-
 .stars {
   color: $navBarBG;
+  font-size: 18px!important;
 }
 
 .stars:hover {
@@ -79,7 +83,6 @@
 }
 .notOnWatchListFa {
   display: block;
-  // color: red;
 }
 
 .posters {
@@ -95,7 +98,6 @@
 }
 
 .addToWatchListBtn {
-  position: relative;
   top: -36px;
   font-size: 10px!important;
   font-family: $font4;
