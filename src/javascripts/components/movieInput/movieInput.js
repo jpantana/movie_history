@@ -23,10 +23,13 @@ const newMovie = (e) => {
     }
   });
   moviesData.makeNewMovie(replaceMovieObj)
-    .then(() => {
+    .then(() => { // below clears out inputs in form when new movie is added
+      document.getElementById('movieTitleInput').value = '';
+      document.getElementById('imageUrlInput').value = '';
+      btnToAddNewMovie(); // eslint-disable-line no-use-before-define
       movies.movieCardBuilder()
-        .then()
-        .catch(err => console.error('no movies called', err));
+        .then(() => {
+        }).catch(err => console.error('no movies called', err));
     }).catch(err => console.error(err));
 };
 

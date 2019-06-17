@@ -30,6 +30,8 @@ const changeCardWatchListStatus = (movie) => {
           if (userMov.movieTitle === m.title) {
             document.getElementById(`isOnWatchList.${m.title}`).classList.remove('hide');
             document.getElementById(`isNotOnWatchList.${m.title}`).classList.add('hide');
+            // userMov.stars = m.stars;
+            watchList.addToWatchList(m, userMov);
           }
         });
       });
@@ -88,7 +90,7 @@ const movieCardBuilder = () => {
   moviesData.getMovieByUid().then((movies) => {
     movies.forEach((movie, i) => {
       domString += ` 
-          <div class="col-5 mb-5 justify-content-center">
+          <div class="col-4 mb-5 justify-content-center">
             <div id="" class="card movieCards">
               <div class="card-header cardHeader">
                 <h3 id="${movie.title}" class="text-center">${movie.title}</h3>
@@ -100,10 +102,10 @@ const movieCardBuilder = () => {
               </div>
               <img id="${movie.imageUrl}" class="card-img posters" src="${movie.imageUrl}" alt="movie poster for ${movie.title}"/>
               <span id="${movie.id}" class="card-body">
-                <div id="starsPrint_${i}"></div>
-                  <button class="btn btn-danger addToWatchListBtn" id="notYetWatched.${movie.id}">Watch Later</button>
-                    <p class="card-text movieRating">${movie.movieRating}</p>
+                <button class="btn btn-danger addToWatchListBtn" id="notYetWatched.${movie.id}">Watch Later</button>
+                <div id="starsPrint_${i}" class="starsContainer"></div>
               </span>
+              <p class="card-text movieRating">${movie.movieRating}</p>
             </div>
           </div>`;
     });
@@ -112,7 +114,6 @@ const movieCardBuilder = () => {
     util.printToDom('event', domString);
     starsToBeChecked(movies);
     changeCardWatchListStatus(movies);
-    watchList.addToWatchList(movies);
   }).catch(err => console.error('could not get movie', err));
 };
 
