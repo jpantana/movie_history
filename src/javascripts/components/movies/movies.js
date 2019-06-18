@@ -4,6 +4,7 @@ import watchList from '../watchList/watchList';
 import userData from '../../helpers/data/userData';
 import userList from '../userList/userList';
 import './movies.scss';
+// import SMASH from '../../helpers/SMASH';
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // adds stars to new movies and must be on To Watch list first
@@ -22,15 +23,16 @@ const addNewStarReview = (e, movieId) => {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // changes minus icon to check symbol in movie card header if added to user_movie
-const changeCardWatchListStatus = (movie) => {
+const changeCardWatchListStatus = (movies) => {
   userData.watchListsOnWatchList()
     .then((watchListResolve) => {
       watchListResolve.forEach((userMov) => {
-        movie.forEach((m) => {
+        // console.error(userMov);
+        movies.forEach((m) => {
+          // const finalMovieUser = SMASH.usersAndMovies(movies, userMov);
+          // console.error(finalMovieUser);
           if (userMov.movieTitle === m.title) {
             document.getElementById(`isOnWatchList.${m.title}`).classList.remove('hide');
-            document.getElementById(`isNotOnWatchList.${m.title}`).classList.add('hide');
-            // userMov.stars = m.stars;
             watchList.addToWatchList(m, userMov);
           }
         });
