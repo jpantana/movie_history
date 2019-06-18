@@ -11,7 +11,7 @@ const deleteMoviesEvent = (e, m) => {
   moviesData.deleteMovie(movieId)
     .then(() => {
       getMovies(firebase.auth().currentUser.uid); // eslint-disable-line no-use-before-define
-      console.error(m);
+      // console.error(m);
       addToWatchList(m); // eslint-disable-line no-use-before-define
     }).catch(err => console.error('no deletion', err));
 };

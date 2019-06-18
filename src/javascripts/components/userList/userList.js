@@ -6,6 +6,7 @@ import userData from '../../helpers/data/userData';
 const addMovieDataToUserMovie = (movie) => {
   const movieTtl = movie.title;
   const movieId2 = movie.id;
+  const movieStars = movie.stars;
   const movRating = movie.movieRating;
   const movImg = movie.imageUrl;
   const moviesOnWatchList = {
@@ -13,6 +14,7 @@ const addMovieDataToUserMovie = (movie) => {
     movieTitle: '',
     rating: '',
     isWatched: false,
+    stars: movieStars, // just added this
   };
   moviesOnWatchList.movieTitle = movieTtl;
   moviesOnWatchList.movieId = movieId2;
