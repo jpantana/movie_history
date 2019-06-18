@@ -27,12 +27,10 @@ const changeCardWatchListStatus = (movies) => {
   userData.watchListsOnWatchList()
     .then((watchListResolve) => {
       watchListResolve.forEach((userMov) => {
-        // console.error(userMov);
         movies.forEach((m) => {
-          // const finalMovieUser = SMASH.usersAndMovies(movies, userMov);
-          // console.error(finalMovieUser);
           if (userMov.movieTitle === m.title) {
             document.getElementById(`isOnWatchList.${m.title}`).classList.remove('hide');
+            document.getElementById(`isNotOnWatchList.${m.title}`).classList.add('hide');
             watchList.addToWatchList(m, userMov);
           }
         });
